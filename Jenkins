@@ -11,9 +11,6 @@ environment {
     IMAGE_NAME = "tes-ai-app"
     IMAGE_TAG = "v1"
 
-    GIT_REPO = "https://github.com/Surya8442/Tes-AI.git"
-    GIT_BRANCH = "main"
-
     DOCKER_CREDS = "Docker_cred"
     NEXUS_CREDS = "nexus_cred"
 
@@ -32,7 +29,7 @@ stages {
 
     stage('Checkout') {
         steps {
-            git branch: "${GIT_BRANCH}", url: "${GIT_REPO}"
+            git branch: 'main', url: 'https://github.com/Surya8442/Tes-AI.git'
         }
     }
 
