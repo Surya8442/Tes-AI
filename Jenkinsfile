@@ -128,7 +128,6 @@ post {
             to: "${NOTIFY_EMAIL}",
             subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
             body: """
-```
 
 TES-AI Deployment Successful 🚀
 
@@ -144,13 +143,11 @@ ${env.BUILD_URL}
 )
 }
 
-```
     failure {
         emailext(
             to: "${NOTIFY_EMAIL}",
             subject: "FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
             body: """
-```
 
 TES-AI Pipeline Failed ❌
 
@@ -160,12 +157,10 @@ ${env.BUILD_URL}
 )
 }
 
-```
     always {
         echo 'Cleaning workspace...'
         cleanWs()
     }
 }
-```
 
 }
