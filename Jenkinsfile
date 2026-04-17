@@ -3,6 +3,7 @@ agent any
 
 tools {
     jdk 'JDK17'
+    sonarQubeScanner 'sonar-scanner'
 
 }
 
@@ -47,18 +48,17 @@ stages {
     }
 
     stage('SonarQube Analysis') {
-        steps {
-            withSonarQubeEnv("${SONARQUBE_ENV}") {
-                sh '''
-                    sonar-scanner \
-                    -Dsonar.projectKey=tes-ai \
-                    -Dsonar.sources=backend \
-                    -Dsonar.host.url=$SONAR_HOST_URL \
-                    -Dsonar.login=$SONAR_AUTH_TOKEN
-                '''
-            }
+    steps {
+        withSonarQubeEnv('sonar-server') {
+            sh '''
+                sonar-scanner \
+                -Dsonar.projectKey=tes-ai \
+                -Dsonar.sources=backend
+            '''
         }
     }
+}
+    
 
     stage('Quality Gate') {
         steps {
