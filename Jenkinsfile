@@ -14,7 +14,7 @@ pipeline {
         NEXUS_CREDS = "nexus-cred"
 
         NEXUS_URL = "http://65.2.49.196:8081"
-        NEXUS_REPO = "tes-ai-repo"
+        NEXUS_REPO = "python-repo"
 
         AWS_REGION = "ap-south-1"
         EKS_CLUSTER = "mycluster"
