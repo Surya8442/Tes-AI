@@ -3,6 +3,7 @@ agent any
 
 tools {
     jdk 'JDK17'
+    sonarQubeScanner 'sonar-scanner'
 }
 
 environment {
@@ -16,7 +17,7 @@ environment {
     NEXUS_URL = "http://65.2.49.196:8081"
     NEXUS_REPO = "tes-ai-repo"
 
-    SONARQUBE_ENV = "sonar-token"
+    SONARQUBE_ENV = "sonar-scanner"
 
     AWS_REGION = "ap-south-1"
     EKS_CLUSTER = "mycluster"
