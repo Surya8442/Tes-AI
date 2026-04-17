@@ -3,7 +3,7 @@ agent any
 
 tools {
     jdk 'JDK17'
-    sonarQubeScanner 'sonar-scanner'
+
 }
 
 environment {
