@@ -11,10 +11,10 @@ pipeline {
         IMAGE_TAG = "v1"
 
         DOCKER_CREDS = "Docker_cred"
-        NEXUS_CREDS = "nexus_cred"
+        NEXUS_CREDS = "nexus-cred"
 
         NEXUS_URL = "http://65.2.49.196:8081"
-        NEXUS_REPO = "python-repo"
+        NEXUS_REPO = "tes-ai-repo"
 
         AWS_REGION = "ap-south-1"
         EKS_CLUSTER = "mycluster"
