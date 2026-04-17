@@ -16,7 +16,7 @@ environment {
     NEXUS_URL = "http://65.2.49.196:8081"
     NEXUS_REPO = "tes-ai-repo"
 
-    SONARQUBE_ENV = "sonar-server"
+    SONARQUBE_ENV = "sonar-token"
 
     AWS_REGION = "ap-south-1"
     EKS_CLUSTER = "mycluster"
